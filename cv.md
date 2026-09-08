@@ -46,11 +46,7 @@ You can find examples of my code and projects on my GitHub
 - [Front-end developer portfolio](https://github.com/AnastasiiaHombalevska/frontend-developer-portfolio)
 
 ### Exmpl
-```function multiply(a, b){
-  return a * b
-}
-
-
+```
 var capitals = function (word) {
 	return word.split('')
   .map((char, index) => {
