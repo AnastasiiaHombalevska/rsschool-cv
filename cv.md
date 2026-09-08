@@ -49,9 +49,9 @@ You can find examples of my code and projects on my GitHub
 ```function multiply(a, b){
   return a * b
 }
-```
 
-```var capitals = function (word) {
+
+var capitals = function (word) {
 	return word.split('')
   .map((char, index) => {
     if(char === char.toUpperCase() && char !== char.toLowerCase()) {
