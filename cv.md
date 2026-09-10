@@ -17,6 +17,7 @@ My main goal is to improve my JavaScript and TypeScript skills and grow as a pro
 ### Programming Languages
 - JavaScript (ES6+)
 - TypeScript — basic
+- jQuery
 - HTML5
 - CSS3
 

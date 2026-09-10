@@ -55,12 +55,6 @@ html {
   color: var(--color-white);
 }
 
-.item__date {
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--color-white);
-}
-
 .profession {
   font-size: 18px;
   font-weight: 300;
@@ -230,6 +224,20 @@ html {
 .education__items,
 .experience__items {
   gap: 13px;
+}
+
+.item__date {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.experience .item__date {
+  color: var(--color-dark);
+}
+
+.item__info {
+  margin-top: 12px;
 }
 
 /* footer */
