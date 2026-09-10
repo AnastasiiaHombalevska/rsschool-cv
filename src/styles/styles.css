@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-white: #ffffff;
+  --color-dark: #3f4044;
+  --color-gray: #a9acb5;
+  --color-black: #000000;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,13 +20,53 @@ p,
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
 html {
   scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 
 .body {
   padding: 45px;
 }
+
+.section__title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  padding-bottom: 5px;
+}
+
+/* ------------------------ */
+.item__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.item__date {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.profession {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+/* ------------------------ */
 
 .header {
   width: 100%;
@@ -41,13 +90,13 @@ html {
 
 .header__description-top {
   height: 100px;
-  background-color: white;
+  background-color: var(--color-white);
   flex: 25%;
 }
 
 .header__description-container {
-  color: white;
-  background-color: grey;
+  color: var(--color-white);
+  background-color: var(--color-gray);
   padding: 50px 30px;
   flex: 75%;
   display: flex;
@@ -57,7 +106,6 @@ html {
   justify-content: flex-end;
 }
 
-
 .header__title-container {
   align-content: center;
 
@@ -66,27 +114,27 @@ html {
   position: absolute;
 
   padding: 20px;
-  background-color: white;
+  background-color: var(--color-white);
   width: 390px;
   height: 120px;
 
-  border: 2px solid black;
+  border: 2px solid  var(--color-black);
 }
 
 .header__title {
   font-size: 32px;
-  font-weight: 600px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .header__subtitle {
   font-size: 24px;
-  font-weight: 400px;
+  font-weight: 400;
 }
-
 
 /* main section */
 .main {
+  color: var(--color-white);
   margin-top: 20px;
 }
 
@@ -109,4 +157,38 @@ html {
 
 .main__details {
   flex: 3;
+}
+
+/* contacts */
+.contacts {
+  background-color: var(--color-dark);
+  padding: 30px 0 30px 30px;
+}
+
+.contacts__items {
+  text-transform: capitalize;
+}
+
+/* skills */
+.skills {
+  background-color: var(--color-gray);
+  padding: 30px 0 30px 30px;
+}
+
+/* social-media */
+.social-media {
+  background-color: var(--color-dark);
+  padding: 30px 0 30px 30px;
+}
+
+/* education */
+.education {
+  background-color: var(--color-dark);
+  padding: 30px 0 30px 30px;
+}
+
+/* experience */
+.experience {
+  background-color: var(--color-gray);
+  padding: 30px 0 30px 30px;
 }
