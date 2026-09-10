@@ -16,12 +16,9 @@ h1,
 h2,
 h3,
 p,
+ul,
 .body {
   margin: 0;
-}
-
-ul {
-  list-style: none;
 }
 
 a {
@@ -35,7 +32,11 @@ html {
 }
 
 .body {
+  max-width: 934px;
   padding: 45px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
 }
 
 .section__title {
@@ -79,6 +80,9 @@ html {
 }
 
 .header__photo {
+  background-image: url("/src/pictures/IMG_1644.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   flex: 1;
 }
 
@@ -91,34 +95,33 @@ html {
 .header__description-top {
   height: 100px;
   background-color: var(--color-white);
+  border-top: 3px solid var(--color-dark);
+  border-right: 3px solid var(--color-dark);
   flex: 25%;
 }
 
 .header__description-container {
   color: var(--color-white);
   background-color: var(--color-gray);
-  padding: 50px 30px;
+  padding: 30px;
   flex: 75%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   align-items: flex-start;
   justify-content: flex-end;
 }
 
 .header__title-container {
   align-content: center;
-
-  bottom: 200px;
-  right: 195px;
+  top: 130px;
+  right: 28px;
   position: absolute;
-
   padding: 20px;
   background-color: var(--color-white);
-  width: 390px;
+  width: 512px;
   height: 120px;
-
-  border: 2px solid  var(--color-black);
+  border: 2px solid var(--color-black);
 }
 
 .header__title {
@@ -165,8 +168,17 @@ html {
   padding: 30px 0 30px 30px;
 }
 
-.contacts__items {
+.contacts__items,
+.skills__items,
+.social-media__items,
+.education__items,
+.experience__items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   text-transform: capitalize;
+  padding-left: 12px;
+  margin-top: 30px;
 }
 
 /* skills */
@@ -181,6 +193,31 @@ html {
   padding: 30px 0 30px 30px;
 }
 
+.social-media__items {
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+}
+
+.icon::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon__telegram::before {
+  background-image: url("/src/images/logos/telegram.png");
+}
+
+.icon__linkedin::before {
+  background-image: url("/src/images/logos/linkedin.png");
+  width: 28px;
+  height: 28px;
+}
+
 /* education */
 .education {
   background-color: var(--color-dark);
@@ -191,4 +228,9 @@ html {
 .experience {
   background-color: var(--color-gray);
   padding: 30px 0 30px 30px;
+}
+
+.education__items,
+.experience__items {
+  gap: 13px;
 }
