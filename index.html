@@ -59,6 +59,7 @@
           <li class="skills__item">jQuery</li>
           <li class="skills__item">HTML5</li>
           <li class="skills__item">CSS3/SCSS</li>
+          <li>English - Upper Intermediate</li>
         </ul>
       </section>
 
@@ -76,6 +77,13 @@
         <h3 class="section__title">Education</h3>
 
         <ul class="education__items">
+          <li class="education__item">Free code camp <span class="item__date">2025-2026</span>
+            <br />
+            <p class="item__description">Clean Code Course</p>
+            <p class="item__description">JavaScript Course</p>
+            <p class="item__description">JavaScript interview Course</p>
+          </li>
+
           <li class="education__item">Free code camp <span class="item__date">2025</span>
             <br />
             <p class="item__description">Front-End Development Course</p>
@@ -84,11 +92,6 @@
           <li class="education__item">Mate Academy <span class="item__date">2023</span>
             <br />
             <p class="item__description">Front-End Development Course</p>
-          </li>
-
-          <li class="education__item">Chernihiv National T. G. Shevchenko Pedagogical University <span class="item__date">2009–2015</span>
-            <br/>
-            <p class="item__description">Psychology</p>
           </li>
         </ul>
       </section>
@@ -113,6 +116,30 @@
       </section>
     </div>
   </div>
+  
+  <section class="codewars">
+    <h2 class="section__title">CodeWars</h2>
+
+    <p class="codewars__description">
+      Example of my solution:
+    </p>
+
+    <pre class="codewars__code">
+      <code class="exmpl">
+        var capitals = function (word) {
+          return word.split('')
+            .map((char, index) => {
+              if(char === char.toUpperCase() && char !== char.toLowerCase()) {
+                return index;
+              }
+        
+                return null;
+              })
+            .filter(el => el !== null);
+        };
+      </code>
+    </pre>
+  </section>
 </main>
 
   <footer class="footer">
@@ -123,5 +150,4 @@
     </ul>
   </footer>
 </body>
-
 </html>

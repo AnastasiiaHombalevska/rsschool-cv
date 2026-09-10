@@ -48,20 +48,12 @@ html {
   padding-bottom: 5px;
 }
 
-/* ------------------------ */
 .item__description {
   font-size: 16px;
   font-weight: 400;
   color: var(--color-white);
+  padding-top: 1px;
 }
-
-.profession {
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 4px;
-}
-
-/* ------------------------ */
 
 .header {
   width: 100%;
@@ -257,4 +249,19 @@ html {
 .icon__school::before {
   background-image: url("/src/images/rs-school-logo.svg");
   width: 70px;
+}
+
+/* codewars */
+.codewars {
+  background-color: var(--color-black);
+  padding: 30px 30px 0;
+  margin-top: 20px;
+}
+
+.codewars__description {
+  margin-top: 30px;
+}
+
+.codewars__code {
+  margin: 0;
 }
