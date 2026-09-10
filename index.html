@@ -8,7 +8,149 @@
     initial-scale=1.0"
   >
   <title>CV Hombalevska Anastasiia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/styles.css">
 </head>
-<body>
+
+<body class="body">
+<header class="header">
+  <div class="header__photo"></div>
+
+  <div class="header__description">
+    <div class="header__description-top"></div>
+
+    <div class="header__description-container">
+      <h3 class="section__title">About me</h3>
+
+      <p class="header__intro">
+        I am a Junior Front-End Developer.
+        
+        My main goal is to improve my JavaScript and TypeScript skills and grow as a professional Front-End Developer. I am
+        responsible, attentive to detail, persistent, and always willing to learn new technologies.
+      </p>
+    </div>
+  </div>
+
+  <div class="header__title-container">
+    <h1 class="header__title">Anastasiia Hombalevska</h1>
+
+    <h2 class="header__subtitle">Full-Stack Developer</h2>
+  </div>
+</header>
+
+<main class="main">
+  <div class="main__content">
+    <div class="main__sidebar">
+      <section class="contacts">
+        <h3 class="section__title">Contact</h3>
+
+        <ul class="contacts__items">
+          <li class="contacts__item"><a class="" href="https://t.me/vasilisandreeva" target="_blank">telegram</a></li>
+          <li class="contacts__item"><a class="" href="mailto:vasilisandreeva@gmail.com"  >email</a></li>
+        </ul>
+      </section>
+
+      <section class="skills">
+        <h3 class="section__title">Skills</h3>
+        
+        <ul class="skills__items">
+          <li class="skills__item">JavaScript (ES6+)</li>
+          <li class="skills__item">React</li>
+          <li class="skills__item">TypeScript</li>
+          <li class="skills__item">jQuery</li>
+          <li class="skills__item">HTML5</li>
+          <li class="skills__item">CSS3/SCSS</li>
+          <li>English - Upper Intermediate</li>
+        </ul>
+      </section>
+
+      <section class="social-media">
+        <h3 class="section__title">Social-media</h3>
+        
+        <ul class="social-media__items">
+          <li class="social-media__item"><a class="icon icon__linkedin" href="https://www.linkedin.com/in/anastasiia-hombalevska/" target="_blank"></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="main__details">
+      <section class="education">
+        <h3 class="section__title">Education</h3>
+
+        <ul class="education__items">
+          <li class="education__item">Free code camp <span class="item__date">2025-2026</span>
+            <br>
+            <p class="item__description">Clean Code Course</p>
+            <p class="item__description">JavaScript Course</p>
+            <p class="item__description">JavaScript interview Course</p>
+          </li>
+
+          <li class="education__item">Free code camp <span class="item__date">2025</span>
+            <br>
+            <p class="item__description">Front-End Development Course</p>
+          </li>
+
+          <li class="education__item">Mate Academy <span class="item__date">2023</span>
+            <br>
+            <p class="item__description">Front-End Development Course</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="experience">
+        <h3 class="section__title">Experience</h3>
+
+        <ul class="experience__items">
+          <li class="experience__item">Front-End Developer — ODDITY <span class="item__date">2025 – Present</span>
+            <br>
+            <p class="item__info">I work on front-end development and maintenance of web projects.
+            My experience includes working with HTML, CSS/SCSS, JavaScript, jQuery, Git, and existing PHP-based codebases. I
+            implement interface changes, fix bugs, work with existing project architecture, and maintain and improve front-end
+            functionality.</p>
+          </li>
+
+          <li class="experience__item">Front-End Developer — Freelance <span class="item__date">2023 – Present</span>
+            <br>
+            <p class="item__info">I am focusing on creating pet-projects using JavaScript, React, TypeScript, and modern front-end development practices.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  
+  <section class="codewars">
+    <h2 class="section__title">CodeWars</h2>
+
+    <p class="codewars__description">
+      Example of my solution:
+    </p>
+
+    <pre class="codewars__code">
+      <code class="exmpl">
+        var capitals = function (word) {
+          return word.split('')
+            .map((char, index) => {
+              if(char === char.toUpperCase() && char !== char.toLowerCase()) {
+                return index;
+              }
+        
+                return null;
+              })
+            .filter(el => el !== null);
+        };
+      </code>
+    </pre>
+  </section>
+</main>
+
+  <footer class="footer">
+    <ul class="footer-list">
+      <li class="footer-list-item"><a class="footer-link icon icon__github" href="https://github.com/AnastasiiaHombalevska" target="_blank"></a></li>
+      <li class="footer-list-item">2026</li>
+      <li class="footer-list-item"><a class="footer-link icon icon__school " href="https://app.rs.school/" target="_blank"></a></li>
+    </ul>
+  </footer>
 </body>
 </html>

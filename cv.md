@@ -17,6 +17,7 @@ My main goal is to improve my JavaScript and TypeScript skills and grow as a pro
 ### Programming Languages
 - JavaScript (ES6+)
 - TypeScript — basic
+- jQuery
 - HTML5
 - CSS3
 
@@ -75,4 +76,4 @@ I continue to develop my technical skills through self-study, practical projects
 Currently, I am focusing on JavaScript, TypeScript, Angular, and modern front-end development practices.
 
 ## English
-Intermediate (B1–B2)
+Upper Intermediate
