@@ -64,7 +64,7 @@ html {
 }
 
 .header__photo {
-  background-image: url("/src/pictures/IMG_1644.jpg");
+  background-image: url("./src/pictures/IMG_1644.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1;
@@ -194,7 +194,7 @@ html {
 }
 
 .icon__linkedin::before {
-  background-image: url("/src/images/logos/linkedin.png");
+  background-image: url("./src/images/logos/linkedin.png");
   width: 28px;
   height: 28px;
 }
@@ -241,11 +241,11 @@ html {
 }
 
 .icon__github::before {
-  background-image: url("/src/images/logos/github.png");
+  background-image: url("./src/images/logos/github.png");
 }
 
 .icon__school::before {
-  background-image: url("/src/images/rs-school-logo.svg");
+  background-image: url("./src/images/rs-school-logo.svg");
   width: 70px;
 }
 
