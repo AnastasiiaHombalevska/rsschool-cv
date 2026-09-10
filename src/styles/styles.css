@@ -172,7 +172,8 @@ html {
 .skills__items,
 .social-media__items,
 .education__items,
-.experience__items {
+.experience__items,
+.footer-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -208,10 +209,6 @@ html {
   background-size: contain;
 }
 
-.icon__telegram::before {
-  background-image: url("/src/images/logos/telegram.png");
-}
-
 .icon__linkedin::before {
   background-image: url("/src/images/logos/linkedin.png");
   width: 28px;
@@ -233,4 +230,23 @@ html {
 .education__items,
 .experience__items {
   gap: 13px;
+}
+
+/* footer */
+.footer-list {
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-self: center;
+  list-style: none;
+  padding: 0;
+}
+
+.icon__github::before {
+  background-image: url("/src/images/logos/github.png");
+}
+
+.icon__school::before {
+  background-image: url("/src/images/rs-school-logo.svg");
+  width: 70px;
 }
