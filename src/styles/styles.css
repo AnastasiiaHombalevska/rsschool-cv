@@ -1,0 +1,265 @@
+:root {
+  --color-white: #ffffff;
+  --color-dark: #3f4044;
+  --color-gray: #a9acb5;
+  --color-black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+h1,
+h2,
+h3,
+p,
+ul,
+.body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+.body {
+  max-width: 934px;
+  padding: 45px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+}
+
+.section__title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  padding-bottom: 5px;
+}
+
+.item__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-white);
+  padding-top: 1px;
+}
+
+.header {
+  width: 100%;
+  height: 467px;
+
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+}
+
+.header__photo {
+  background-image: url("../pictures/IMG_1644.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+}
+
+.header__description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__description-top {
+  height: 100px;
+  background-color: var(--color-white);
+  border-top: 3px solid var(--color-dark);
+  border-right: 3px solid var(--color-dark);
+  flex: 25%;
+}
+
+.header__description-container {
+  color: var(--color-white);
+  background-color: var(--color-gray);
+  padding: 30px;
+  flex: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.header__title-container {
+  align-content: center;
+  top: 130px;
+  right: 28px;
+  position: absolute;
+  padding: 20px;
+  background-color: var(--color-white);
+  width: 512px;
+  height: 120px;
+  border: 2px solid var(--color-black);
+}
+
+.header__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.header__subtitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* main section */
+.main {
+  color: var(--color-white);
+  margin-top: 20px;
+}
+
+.main__content,
+.main__sidebar,
+.main__details {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.main__sidebar,
+.main__details {
+  flex-direction: column;
+}
+
+.main__sidebar {
+  flex: 1;
+}
+
+.main__details {
+  flex: 3;
+}
+
+/* contacts */
+.contacts {
+  background-color: var(--color-dark);
+  padding: 30px 0 30px 30px;
+}
+
+.contacts__items,
+.skills__items,
+.social-media__items,
+.education__items,
+.experience__items,
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-transform: capitalize;
+  padding-left: 12px;
+  margin-top: 30px;
+}
+
+/* skills */
+.skills {
+  background-color: var(--color-gray);
+  padding: 30px 0 30px 30px;
+}
+
+/* social-media */
+.social-media {
+  background-color: var(--color-dark);
+  padding: 30px 0 30px 30px;
+}
+
+.social-media__items {
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+}
+
+.icon::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon__linkedin::before {
+  background-image: url("../images/logos/linkedin.png");
+  width: 28px;
+  height: 28px;
+}
+
+/* education */
+.education {
+  background-color: var(--color-dark);
+  padding: 30px 0 30px 30px;
+}
+
+/* experience */
+.experience {
+  background-color: var(--color-gray);
+  padding: 30px 0 30px 30px;
+}
+
+.education__items,
+.experience__items {
+  gap: 13px;
+}
+
+.item__date {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.experience .item__date {
+  color: var(--color-dark);
+}
+
+.item__info {
+  margin-top: 12px;
+}
+
+/* footer */
+.footer-list {
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-self: center;
+  list-style: none;
+  padding: 0;
+}
+
+.icon__github::before {
+  background-image: url("../images/logos/github.png");
+}
+
+.icon__school::before {
+  background-image: url("../images/rs-school-logo.svg");
+  width: 70px;
+}
+
+/* codewars */
+.codewars {
+  background-color: var(--color-black);
+  padding: 30px 30px 0;
+  margin-top: 20px;
+}
+
+.codewars__description {
+  margin-top: 30px;
+}
+
+.codewars__code {
+  margin: 0;
+}
