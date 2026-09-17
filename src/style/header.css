@@ -43,7 +43,6 @@
 .theme-mode-container .is-active {
   background-color: #b0907a;
   border-radius: 100px;
-  box-sizing: border-box;
 }
 
 .theme-mode-btn {

@@ -18,15 +18,16 @@ a {
   text-decoration: none;
 }
 
-button {
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.btn {
   font-family: inherit;
   border: none;
   outline: none;
   background: transparent;
-}
-
-body {
-  margin: 0;
 }
 
 .body {
@@ -47,3 +48,47 @@ body {
 }
 
 /* main */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* hero */
+.hero {
+  color: #e1d4c9;
+  padding-top: 20px;
+}
+
+.title-italic {
+  color: #b0907a;
+  font-style: italic;
+}
+
+.hero-container {
+  background: url("/src/images/hero-img.jpg") center / cover no-repeat;
+  border-radius: 40px;
+  padding: 100px;
+}
+
+.hero-content {
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.hero .section-title {
+  line-height: 105%;
+}
+
+.hero-menu-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #403f3d;
+  background-color: #e1d4c9;
+  border-radius: 40px;
+  padding: 20px 78px;
+}
+
