@@ -170,3 +170,72 @@ body {
   display: block;
   object-fit: cover;
 }
+
+.mobile-app {
+  display: flex;
+  gap: 100px;
+}
+
+.mobile-app-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1.2;
+  padding-block: 144px;
+}
+
+.mobile-app-image {
+  flex: 1;
+  background-image: url("/src/images/mobile-screens.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.mobile-app-btn {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  border: 1px solid #665f55;
+  border-radius: 100px;
+  padding-block: 12px;
+  position: relative;
+}
+
+.bnt-top {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.app-store {
+  padding-inline: 64px 58px;
+}
+
+.google-play {
+  padding-inline: 64px 44px;
+}
+
+.app-store::before,
+.google-play::before {
+  content: "";
+  display: inline-block;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 14px;
+  left: 20px;
+  position: absolute;
+}
+
+.app-store::before {
+  width: 36px;
+  height: 36px;
+  background-image: url("/src/images/icons/iphone.png");
+}
+
+.google-play::before {
+  width: 31px;
+  height: 31px;
+  background-image: url("/src/images/icons/goggleplay.png");
+}
