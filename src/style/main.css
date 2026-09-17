@@ -9,7 +9,8 @@ ul,
 li,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   padding: 0;
   margin: 0;
 }
@@ -19,6 +20,7 @@ a {
 }
 
 body {
+  color: #403f3d;
   box-sizing: border-box;
   margin: 0;
 }
@@ -41,10 +43,13 @@ body {
 
 .section-title {
   font-size: 60px;
+  line-height: 125%;
 }
 
 .section-subtitle {
   font-size: 24px;
+  line-height: 125%;
+  font-weight: 600;
 }
 
 /* main */
@@ -58,6 +63,11 @@ body {
 .hero {
   color: #e1d4c9;
   padding-top: 20px;
+}
+
+.section-hero-title {
+  font-size: 72px;
+  line-height: 105%;
 }
 
 .title-italic {
@@ -79,10 +89,6 @@ body {
   gap: 40px;
 }
 
-.hero .section-title {
-  line-height: 105%;
-}
-
 .hero-menu-btn {
   font-size: 16px;
   font-weight: 600;
@@ -92,3 +98,35 @@ body {
   padding: 20px 78px;
 }
 
+/* favorite-coffee */
+.favorite-coffee {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.carosel-container {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.coffe-card-descr {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.coffe-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.coffe-card-image {
+  width: 100%;
+}
+
+.coffe-card-price {
+  font-size: 24px;
+  line-height: 125%;
+  font-weight: 600;
+}
