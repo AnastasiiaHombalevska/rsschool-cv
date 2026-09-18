@@ -98,3 +98,16 @@
   background-image: url("/src/images/icons/clock.png");
   padding-right: 8px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 60px;
+  }
+
+  .social-media,
+  .contact-us {
+    padding: 0;
+  }
+}
