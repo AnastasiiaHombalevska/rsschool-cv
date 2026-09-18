@@ -372,6 +372,26 @@ li {
 /* aside menu */
 .side-menu {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.side-menu .nav {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.side-menu .menu-btn {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #403f3d;
 }
 
 @media (max-width: 768px) {
@@ -380,8 +400,13 @@ li {
   }
 
   /* add after adding functionality */
-  .side-menu {
+  /* .side-menu {
     display: none;
+  } */
+
+  .carousel-btn::after {
+    width: 24px;
+    height: 24px;
   }
 
   .carousel-btn.prev {
