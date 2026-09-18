@@ -82,10 +82,11 @@
 }
 
 .menu-btn {
+  width: 90px;
   display: flex;
   gap: 8px;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: 16px;
   cursor: pointer;
 }
@@ -98,8 +99,58 @@
   width: 20px;
   height: 20px;
   background-image: url("/src/images/icons/coffee-cup.png");
+  opacity: 0;
 }
 
-.dark-theme .menu-btn::after {
+.menu-btn:hover::after {
+  opacity: 1;
+}
+
+.dark-theme .menu-btn:hover::after {
   background-image: url("/src/images/icons/coffee-cup-light.png");
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .header .nav {
+    display: none;
+  }
+
+  .mobile-menu-btn.btn {
+    width: 44px;
+    height: 44px;
+    display: block;
+    border: 1px solid #665f55;
+    border-radius: 100px;
+    padding: 16px 13px;
+  }
+
+  .mobile-menu-btn::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("/src/images/icons/menu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .dark-theme .mobile-menu-btn::before {
+    background-image: url("/src/images/icons/menu-light.png");
+  }
+
+  .is-active .mobile-menu-btn::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("/src/images/icons/close.png");
+  }
+
+  .dark-theme.is-active .mobile-menu-btn::before {
+    background-image: url("/src/images/icons/close-light.png");
+  }
 }
