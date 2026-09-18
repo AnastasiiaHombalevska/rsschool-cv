@@ -7,6 +7,10 @@
   border-radius: 40px;
 }
 
+.dark-theme .footer {
+  background-color: #403F3D;
+}
+
 .social-media,
 .contact-us {
   display: flex;
