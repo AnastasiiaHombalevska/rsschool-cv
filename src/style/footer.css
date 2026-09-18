@@ -1,3 +1,96 @@
 .footer {
-  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  color: #e1d4c9;
+  background-color: #665f55;
+  border-radius: 40px;
+}
+
+.social-media,
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 40px;
+}
+
+.social-media {
+  padding: 100px 0 100px 100px;
+}
+
+.social-media .section-title {
+  white-space: nowrap;
+}
+
+.social-media-list {
+  display: flex;
+  gap: 12px;
+}
+
+.social-media-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c1b6ad;
+  border-radius: 100px;
+  padding: 18px;
+}
+
+.contact-us {
+  padding: 100px 100px 100px 0;
+}
+
+.contact-us-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-us-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-link {
+  color: #e1d4c9;
+}
+
+.icon::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-tw::before {
+  background-image: url("/src/images/icons/twitter.png");
+}
+
+.icon-inst::before {
+  background-image: url("/src/images/icons/instagram.png");
+}
+
+.icon-fb::before {
+  background-image: url("/src/images/icons/facebook.png");
+}
+
+.icon-location::before {
+  display: inline-block;
+  background-image: url("/src/images/icons/pin-alt.png");
+  padding-right: 8px;
+}
+
+.icon-tel::before {
+  display: inline-block;
+  background-image: url("/src/images/icons/phone.png");
+  padding-right: 8px;
+}
+
+.icon-clock::before {
+  display: inline-block;
+  background-image: url("/src/images/icons/clock.png");
+  padding-right: 8px;
 }
