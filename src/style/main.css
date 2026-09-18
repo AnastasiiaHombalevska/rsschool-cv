@@ -23,12 +23,6 @@ li {
   list-style: none;
 }
 
-body {
-  color: #403f3d;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .btn {
   font-family: inherit;
   border: none;
@@ -41,10 +35,17 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+  color: #403f3d;
+  box-sizing: border-box;
   background-color: #e1d4c9;
   max-width: 1360px;
   padding: 20px 40px;
   margin: 0 auto;
+}
+
+.body.dark-theme {
+  color: #e1d4c9;
+  background-color: #292826;
 }
 
 .section-title {
@@ -102,6 +103,11 @@ body {
   background-color: #e1d4c9;
   border-radius: 40px;
   padding: 20px 78px;
+}
+
+.dark-theme .hero-menu-btn {
+  color: #e1d4c9;
+  background-color: #292826;
 }
 
 /* favorite-coffee */
@@ -175,6 +181,7 @@ body {
   object-fit: cover;
 }
 
+/* mobile-app */
 .mobile-app {
   display: flex;
   gap: 100px;
@@ -196,6 +203,10 @@ body {
   background-position: center;
 }
 
+.dark-theme .mobile-app-image {
+  background-image: url("/src/images/mobile-screens-dark.png");
+}
+
 .mobile-app-btn {
   font-size: 16px;
   font-weight: 600;
@@ -204,6 +215,11 @@ body {
   border-radius: 100px;
   padding-block: 12px;
   position: relative;
+}
+
+.dark-theme .mobile-app-btn {
+  color: #e1d4c9;
+  border: 1px solid #c1b6ad;
 }
 
 .bnt-top {
@@ -238,8 +254,16 @@ body {
   background-image: url("/src/images/icons/iphone.png");
 }
 
+.dark-theme .app-store::before {
+  background-image: url("/src/images/icons/iphone-light.png");
+}
+
 .google-play::before {
   width: 31px;
   height: 31px;
   background-image: url("/src/images/icons/goggleplay.png");
+}
+
+.dark-theme .google-play::before {
+  background-image: url("/src/images/icons/goggleplay-light.png");
 }

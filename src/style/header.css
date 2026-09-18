@@ -18,6 +18,10 @@
   background-size: contain;
 }
 
+.dark-theme .logo::before {
+  background-image: url("../images/logos/logo-light.png");
+}
+
 .nav {
   display: flex;
   gap: 40px;
@@ -25,6 +29,10 @@
 
 .nav-link {
   color: #403f3d;
+}
+
+.dark-theme .nav-link {
+  color: #e1d4c9;
 }
 
 .btn-container {
@@ -40,7 +48,8 @@
   padding: 3px;
 }
 
-.theme-mode-container .is-active {
+.body:not(.dark-theme) .light,
+.dark-theme .dark {
   background-color: #b0907a;
   border-radius: 100px;
 }
@@ -64,11 +73,11 @@
   height: 18px;
 }
 
-.theme-mode-btn.light::before {
+.light::before {
   background-image: url("/src/images/icons/sun.png");
 }
 
-.theme-mode-btn.dark::before {
+.dark::before {
   background-image: url("/src/images/icons/moon.svg");
 }
 
@@ -81,8 +90,16 @@
   cursor: pointer;
 }
 
+.dark-theme .menu-btn {
+  color: #e1d4c9;
+}
+
 .menu-btn::after {
   width: 20px;
   height: 20px;
   background-image: url("/src/images/icons/coffee-cup.png");
+}
+
+.dark-theme .menu-btn::after {
+  background-image: url("/src/images/icons/coffee-cup-light.png");
 }
