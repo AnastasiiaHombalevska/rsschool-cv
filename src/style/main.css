@@ -418,4 +418,44 @@ li {
   }
 }
 
-/* @media (max-width: 380px) {} */
+@media (max-width: 380px) {
+  .body {
+    padding: 20px 16px;
+  }
+
+  .section-hero-title {
+    font-size: 42px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .hero-container {
+    padding: 60px 16px;
+  }
+
+  .carousel-container {
+    margin-top: 40px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  .gallery-item-large {
+    height: 590px;
+  }
+
+  .app-store {
+    margin-bottom: 20px;
+  }
+
+  .mobile-app {
+    gap: 0;
+  }
+
+  .mobile-app-image {
+    margin-bottom: 0;
+  }
+}
