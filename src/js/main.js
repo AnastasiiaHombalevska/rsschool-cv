@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function loadComponent(selector, path) {
     const element = document.querySelector(selector);
 
-    fetch(path)
+    return fetch(path)
       .then(function (response) {
         return response.text();
       })
@@ -11,6 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  loadComponent('#header', './src/components/header.html');
+  loadComponent('#header', './src/components/header.html').then(() => {
+    initThemeMode();
+  });
   loadComponent('#footer', './src/components/footer.html');
+
+  // theme mode
+  function initThemeMode() {
+    const themeButtons = document.querySelectorAll('.theme-mode-btn');
+
+    themeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        document.body.classList.toggle(
+          'dark-theme',
+          button.classList.contains('dark')
+        );
+      });
+    });
+  }
 });
