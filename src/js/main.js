@@ -13,20 +13,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
   loadComponent('#header', './src/components/header.html').then(() => {
     initThemeMode();
+    loadComponent('#header-nav', './src/components/navigation.html');
+    initMobileMenu();
   });
+  loadComponent('#aside-nav', './src/components/navigation.html');
   loadComponent('#footer', './src/components/footer.html');
 
   // theme mode
   function initThemeMode() {
     const themeButtons = document.querySelectorAll('.theme-mode-btn');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+    }
 
     themeButtons.forEach((button) => {
       button.addEventListener('click', () => {
-        document.body.classList.toggle(
-          'dark-theme',
-          button.classList.contains('dark')
-        );
+        const theme = button.classList.contains('dark') ? 'dark' : 'light';
+
+        document.body.classList.toggle('dark-theme', theme === 'dark');
+
+        localStorage.setItem('theme', theme);
       });
     });
+  }
+
+  function initMobileMenu() {
+    const mobileMenu = document.querySelector('.mobile-menu-btn');
+    mobileMenu.addEventListener('click', () => {
+       document.body.classList.toggle('is-active')
+    })
   }
 });
