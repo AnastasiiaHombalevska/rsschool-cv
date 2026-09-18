@@ -139,6 +139,10 @@
     background-size: contain;
   }
 
+  .is-active .mobile-menu-btn.btn {
+    padding: 13px;
+  }
+
   .dark-theme .mobile-menu-btn::before {
     background-image: url("/src/images/icons/menu-light.png");
   }
