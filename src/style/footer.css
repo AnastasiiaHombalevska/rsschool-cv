@@ -39,7 +39,27 @@
   border: 1px solid #c1b6ad;
   border-radius: 100px;
   padding: 18px;
-  cursor: pointer;
+}
+
+.social-item {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.icon-tw .social-item {
+  background-image: url("/src/images/icons/twitter.png");
+}
+
+.icon-inst .social-item {
+  background-image: url("/src/images/icons/instagram.png");
+}
+
+.icon-fb .social-item {
+  background-image: url("/src/images/icons/facebook.png");
 }
 
 .contact-us {
@@ -68,18 +88,6 @@
   height: 24px;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.icon-tw::before {
-  background-image: url("/src/images/icons/twitter.png");
-}
-
-.icon-inst::before {
-  background-image: url("/src/images/icons/instagram.png");
-}
-
-.icon-fb::before {
-  background-image: url("/src/images/icons/facebook.png");
 }
 
 .icon-location::before {
