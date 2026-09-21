@@ -91,7 +91,12 @@
   cursor: pointer;
 }
 
-.dark-theme .menu-btn {
+.menu-btn:visited {
+  color: #403f3d;
+}
+
+.dark-theme .menu-btn,
+.dark-theme .menu-btn:visited {
   color: #e1d4c9;
 }
 
