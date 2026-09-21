@@ -45,4 +45,21 @@ document.addEventListener('DOMContentLoaded', function () {
        document.body.classList.toggle('is-active')
     })
   }
+
+  // menu
+  const menuLinks = document.querySelectorAll('.menu-link');
+  const menuCategories = document.querySelectorAll('.cards-conteiner');
+
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute('href');
+
+      menuCategories.forEach((category) => {
+        category.style.display =
+          category.id === targetId.slice(1) ? 'flex' : 'none';
+      });
+    });
+  });
 });

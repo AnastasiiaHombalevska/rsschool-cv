@@ -1,36 +1,8 @@
+@import "./normalizer.css";
 @import "./variables.css";
 @import "./header.css";
 @import "./footer.css";
-
-html {
-  scroll-behavior: smooth;
-}
-
-p,
-span,
-a,
-ul,
-li,
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-a,
-button {
-  transition: all 0.3s ease;
-}
-
-li {
-  list-style: none;
-}
+@import "./menu.css";
 
 .btn {
   font-family: inherit;
@@ -48,7 +20,7 @@ li {
   box-sizing: border-box;
   background-color: #e1d4c9;
   max-width: 1360px;
-  padding: 20px 40px;
+  padding-block: 20px;
   margin: 0 auto;
 }
 
@@ -392,6 +364,12 @@ li {
   font-size: 32px;
   font-weight: 600;
   color: #403f3d;
+}
+
+@media (max-width: 1280px) {
+  .body {
+    padding-inline: 20px;
+  }
 }
 
 @media (max-width: 768px) {
