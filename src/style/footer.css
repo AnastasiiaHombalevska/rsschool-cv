@@ -106,9 +106,20 @@
     padding: 100px 60px;
   }
 
+  .footer .section-title {
+    text-align: left;
+  }
+
   .social-media,
   .contact-us {
     padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .section-title {
+    font-size: 32px;
+    text-align: left;
   }
 }
 
