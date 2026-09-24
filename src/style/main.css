@@ -433,6 +433,7 @@
   border: 1px solid #665f55;
   border-radius: 100px;
   padding: 11px;
+  transition: all 0.3s;
 }
 
 .product-item:hover {
@@ -490,6 +491,7 @@
   border: 1px solid #665f55;
   border-radius: 100px;
   padding-block: 10px;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
