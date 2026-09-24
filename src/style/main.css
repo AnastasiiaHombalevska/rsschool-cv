@@ -449,29 +449,33 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .body {
     padding: 20px 16px;
-  }
-
-  .section-hero-title {
-    font-size: 42px;
-  }
-
-  .section-title {
-    font-size: 32px;
   }
 
   .hero-container {
     padding: 60px 16px;
   }
 
-  .carousel-container {
-    margin-top: 40px;
+  .section-hero-title {
+    font-size: 42px;
   }
 
   .carousel-btn {
     display: none;
+  }
+
+  .mobile-app-btn-container {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .carousel-container {
+    margin-top: 40px;
   }
 
   .gallery-item-large {
