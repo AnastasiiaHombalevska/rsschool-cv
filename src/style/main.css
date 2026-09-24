@@ -355,7 +355,7 @@
 /* aside menu */
 .side-menu {
   position: fixed;
-  inset: 98px 0 0;
+  inset: 90px 0 0;
   z-index: 100;
 
   display: flex;
@@ -377,6 +377,10 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.dark-theme .side-menu {
+  background-color: #292826;
 }
 
 .side-menu .nav {
