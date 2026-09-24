@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function loadComponent(selector, path) {
     const element = document.querySelector(selector);
 
+    if (!element) {
+      return Promise.resolve();
+    }
+
     return fetch(path)
       .then(function (response) {
         return response.text();
@@ -11,15 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  loadComponent('#header', './src/components/header.html').then(() => {
-    initThemeMode();
-    loadComponent('#header-nav', './src/components/navigation.html');
-    initMobileMenu();
-  });
+  loadComponent('#header', './src/components/header.html')
+    .then(() => {
+      return loadComponent('#header-nav', './src/components/navigation.html');
+    })
+    .then(() => {
+      initThemeMode();
+      initMobileMenu();
+    });
+
   loadComponent('#aside-nav', './src/components/navigation.html');
   loadComponent('#footer', './src/components/footer.html');
 
-  // theme mode
   function initThemeMode() {
     const themeButtons = document.querySelectorAll('.theme-mode-btn');
     const savedTheme = localStorage.getItem('theme');
@@ -41,25 +48,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function initMobileMenu() {
     const mobileMenu = document.querySelector('.mobile-menu-btn');
+
+    if (!mobileMenu) {
+      return;
+    }
+
     mobileMenu.addEventListener('click', () => {
-       document.body.classList.toggle('is-active')
-    })
-  }
-
-  // menu
-  const menuLinks = document.querySelectorAll('.menu-link');
-  const menuCategories = document.querySelectorAll('.cards-conteiner');
-
-  menuLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      const targetId = link.getAttribute('href');
-
-      menuCategories.forEach((category) => {
-        category.style.display =
-          category.id === targetId.slice(1) ? 'flex' : 'none';
-      });
+      document.body.classList.toggle('is-active');
     });
-  });
+  }
 });
