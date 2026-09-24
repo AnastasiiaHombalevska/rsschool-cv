@@ -1,0 +1,139 @@
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  color: #e1d4c9;
+  background-color: #665f55;
+  border-radius: 40px;
+}
+
+.dark-theme .footer {
+  background-color: #403f3d;
+}
+
+.social-media,
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 40px;
+}
+
+.social-media {
+  padding: 100px 0 100px 100px;
+}
+
+.social-media .section-title {
+  white-space: nowrap;
+}
+
+.social-media-list {
+  display: flex;
+  gap: 12px;
+}
+
+.social-media-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c1b6ad;
+  border-radius: 100px;
+  padding: 18px;
+}
+
+.social-item {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.icon-tw .social-item {
+  background-image: url("/src/images/icons/twitter.png");
+}
+
+.icon-inst .social-item {
+  background-image: url("/src/images/icons/instagram.png");
+}
+
+.icon-fb .social-item {
+  background-image: url("/src/images/icons/facebook.png");
+}
+
+.contact-us {
+  padding: 100px 100px 100px 0;
+}
+
+.contact-us-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-us-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-link {
+  color: #e1d4c9;
+}
+
+.icon::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-location::before {
+  display: inline-block;
+  background-image: url("/src/images/icons/pin-alt.png");
+  padding-right: 8px;
+}
+
+.icon-tel::before {
+  display: inline-block;
+  background-image: url("/src/images/icons/phone.png");
+  padding-right: 8px;
+}
+
+.icon-clock::before {
+  display: inline-block;
+  background-image: url("/src/images/icons/clock.png");
+  padding-right: 8px;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 60px;
+  }
+
+  .footer .section-title {
+    text-align: left;
+  }
+
+  .social-media,
+  .contact-us {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .section-title {
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 60px 16px;
+  }
+}
