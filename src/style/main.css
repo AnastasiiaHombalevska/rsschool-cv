@@ -290,6 +290,11 @@
   position: relative;
 }
 
+.mobile-app-btn-container {
+  display: flex;
+  gap: 20px;
+}
+
 .dark-theme .mobile-app-btn {
   color: #e1d4c9;
   border: 1px solid #c1b6ad;
@@ -366,15 +371,46 @@
   color: #403f3d;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
   .body {
     padding-inline: 20px;
   }
 }
 
+@media (max-width: 1280px) {
+  .carousel-btn.prev {
+    right: 0;
+  }
+
+  .carousel-btn.next {
+    left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mobile-app-btn-container {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-app-btn-container {
+    flex-direction: column;
+  }
+
+  .mobile-app-btn {
+    max-width: 203px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .hero-container {
     padding: 60px;
+  }
+
+  .mobile-app-btn-container {
+    flex-direction: row;
   }
 
   /* add after adding functionality */
@@ -385,14 +421,6 @@
   .carousel-btn::after {
     width: 24px;
     height: 24px;
-  }
-
-  .carousel-btn.prev {
-    right: 0;
-  }
-
-  .carousel-btn.next {
-    left: 0;
   }
 
   .about {

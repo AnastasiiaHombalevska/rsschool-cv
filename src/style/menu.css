@@ -8,8 +8,9 @@
   padding-block: 20px 100px;
 }
 
-.section-title {
+.menu .section-title {
   text-align: center;
+  max-width: 800px;
 }
 
 .btn-menu {
@@ -39,6 +40,10 @@
   color: #403f3d;
   font-weight: 600;
   padding-left: 5px;
+}
+
+.dark-theme .menu-link {
+  color: #e1d4c9;
 }
 
 .cards-conteiner {
