@@ -115,7 +115,7 @@
   background-image: url("/src/images/icons/coffee-cup-light.png");
 }
 
-.mobile-menu-btn {
+.mobile-side-menu {
   display: none;
 }
 
@@ -125,7 +125,7 @@
     display: none;
   }
 
-  .mobile-menu-btn.btn {
+  .mobile-side-menu.btn {
     width: 44px;
     height: 44px;
     display: block;
@@ -134,7 +134,7 @@
     padding: 16px 13px;
   }
 
-  .mobile-menu-btn::before {
+  .mobile-side-menu::before {
     content: "";
     display: block;
     width: 16px;
@@ -144,15 +144,15 @@
     background-size: contain;
   }
 
-  .is-active .mobile-menu-btn.btn {
+  .is-active .mobile-side-menu.btn {
     padding: 13px;
   }
 
-  .dark-theme .mobile-menu-btn::before {
+  .dark-theme .mobile-side-menu::before {
     background-image: url("/src/images/icons/menu-light.png");
   }
 
-  .is-active .mobile-menu-btn::before {
+  .is-active .mobile-side-menu::before {
     content: "";
     display: block;
     width: 16px;
@@ -160,7 +160,7 @@
     background-image: url("/src/images/icons/close.png");
   }
 
-  .dark-theme.is-active .mobile-menu-btn::before {
+  .dark-theme.is-active .mobile-side-menu::before {
     background-image: url("/src/images/icons/close-light.png");
   }
 }
