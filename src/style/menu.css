@@ -28,10 +28,12 @@
   cursor: pointer;
 }
 
+.btn-menu-list-item.is-active,
 .btn-menu-list-item:hover {
   background-color: #665f55;
 }
 
+.btn-menu-list-item.is-active .menu-link,
 .btn-menu-list-item:hover .menu-link {
   color: #e1d4c9;
 }
@@ -82,9 +84,13 @@
   height: 506px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20px;
   border: 1px solid #c1b6ad;
   border-radius: 40px;
+}
+
+.dark-theme .card {
+  border-color: #665d55;
 }
 
 .card-img {

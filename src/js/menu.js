@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // modal
+  // add listeners for btns
   const cards = document.querySelectorAll('.card');
   const modalCloseBtn = document.querySelector('.product-close-btn');
   const menu = document.querySelector('.modal');
@@ -50,11 +51,30 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
 
     menu.classList.remove('is-active');
+  });
 
-    modalImage.src = '';
-    modalImage.alt = '';
-    productTitle.textContent = '';
-    productDescription.textContent = '';
-    productPrice.textContent = '';
+  // categories
+  const menuTabs = document.querySelectorAll('.btn-menu-list-item');
+
+  menuTabs.forEach((menuTab) => {
+    menuTab.addEventListener('click', (event) => {
+      const tab = event.target.closest('.menu-link');
+
+      if (!tab) return;
+
+      const category = tab.getAttribute('href');
+
+      menuTabs.forEach((menuTab) => {
+        menuTab.classList.remove('is-active');
+      });
+
+      tab.classList.add('is-active');
+
+      const categoryLists = document.querySelectorAll('.cards-conteiner');
+
+      categoryLists.forEach((categoryList) => {
+        categoryList.hidden = `#${categoryList.id}` !== category;
+      });
+    });
   });
 })
