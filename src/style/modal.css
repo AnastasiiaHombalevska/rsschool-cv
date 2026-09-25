@@ -124,9 +124,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url("/src/images/icons/info-empty.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url("/src/images/icons/info-empty.svg")  center / contain no-repeat;
   top: 12px;
   left: 0;
   position: absolute;

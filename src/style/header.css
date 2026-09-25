@@ -13,13 +13,11 @@
   display: block;
   width: 100px;
   height: 60px;
-  background-image: url("../images/logos/logo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url("../images/logos/logo.png") center / contain no-repeat;
 }
 
 .dark-theme .logo::before {
-  background-image: url("../images/logos/logo-light.png");
+  background: url("../images/logos/logo-light.png") center / contain no-repeat;
 }
 
 .nav {
@@ -67,18 +65,16 @@
 .menu-btn::after {
   content: "";
   display: block;
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 18px;
   height: 18px;
 }
 
 .light::before {
-  background-image: url("/src/images/icons/sun.png");
+  background: url("/src/images/icons/Sun.svg") center / contain no-repeat;
 }
 
 .dark::before {
-  background-image: url("/src/images/icons/moon.svg");
+  background: url("/src/images/icons/moon.svg") center / contain no-repeat;
 }
 
 .menu-btn {
@@ -103,7 +99,7 @@
 .menu-btn::after {
   width: 20px;
   height: 20px;
-  background-image: url("/src/images/icons/coffee-cup.png");
+  background: url("/src/images/icons/coffee-cup.svg") center / contain no-repeat;
   opacity: 0;
 }
 
@@ -112,7 +108,7 @@
 }
 
 .dark-theme .menu-btn:hover::after {
-  background-image: url("/src/images/icons/coffee-cup-light.png");
+  background: url("/src/images/icons/coffee-cup-light.png") center / contain no-repeat;
 }
 
 .mobile-side-menu {
@@ -131,7 +127,7 @@
     display: block;
     border: 1px solid #665f55;
     border-radius: 100px;
-    padding: 16px 13px;
+    padding: 13px;
   }
 
   .mobile-side-menu::before {
@@ -139,17 +135,11 @@
     display: block;
     width: 16px;
     height: 16px;
-    background-image: url("/src/images/icons/menu.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .is-active .mobile-side-menu.btn {
-    padding: 13px;
+    background: url("/src/images/icons/menu.svg") center / contain no-repeat;
   }
 
   .dark-theme .mobile-side-menu::before {
-    background-image: url("/src/images/icons/menu-light.png");
+    background: url("/src/images/icons/menu-light.svg") center / contain no-repeat;
   }
 
   .is-active .mobile-side-menu::before {
@@ -157,10 +147,10 @@
     display: block;
     width: 16px;
     height: 16px;
-    background-image: url("/src/images/icons/close.png");
+    background: url("/src/images/icons/close.svg") center / contain no-repeat;
   }
 
   .dark-theme.is-active .mobile-side-menu::before {
-    background-image: url("/src/images/icons/close-light.png");
+    background: url("/src/images/icons/close-light.svg") center / contain no-repeat;
   }
 }

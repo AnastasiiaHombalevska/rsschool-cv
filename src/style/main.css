@@ -12,6 +12,10 @@
   background: transparent;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -99,7 +103,7 @@
   right: 50px;
   width: 20px;
   height: 20px;
-  background-image: url("/src/images/icons/coffee-cup.png");
+  background: url("/src/images/icons/coffee-cup.svg") center / contain no-repeat;
   opacity: 0;
   position: absolute;
 }
@@ -114,7 +118,7 @@
 }
 
 .dark-theme .hero-menu-btn:hover::after {
-  background-image: url("/src/images/icons/coffee-cup-light.png");
+  background: url("/src/images/icons/coffee-cup-light.png") center / contain no-repeat;
 }
 
 /* favorite-coffee */
@@ -164,17 +168,22 @@
   height: 60px;
   border: 1px solid #665f55;
   border-radius: 50%;
-  background-color: transparent;
   position: absolute;
 }
 
+.carousel-btn:hover {
+  background-color: #665f55;
+}
+
+/* .carousel-btn:hover.prev::after {
+  background: url("/src/images/icons/arrow-right-light.svg") center / contain no-repeat;
+} */
+
 .carousel-btn::after {
   content: "";
-  width: 18px;
-  height: 18px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 28px;
+  height: 28px;
+  background: center / contain no-repeat;
 }
 
 .carousel-btn.prev {
@@ -188,20 +197,22 @@
 }
 
 .prev::after {
-  background-image: url("/src/images/icons/arrow-right.png");
+  background: url("/src/images/icons/arrow-right.svg") center / contain no-repeat;
 }
 
 .next::after {
-  background-image: url("/src/images/icons/arrow-right.png");
+  background: url("/src/images/icons/arrow-right.svg") center / contain no-repeat;
   transform: rotate(180deg);
 }
 
+.carousel-btn:hover.prev::after,
 .dark-theme .prev::after {
-  background-image: url("/src/images/icons/arrow-right-light.png");
+  background: url("/src/images/icons/arrow-right-light.svg") center / contain no-repeat;
 }
 
+.carousel-btn:hover.next::after,
 .dark-theme .next::after {
-  background-image: url("/src/images/icons/arrow-right-light.png");
+  background: url("/src/images/icons/arrow-right-light.svg") center / contain no-repeat;
   transform: rotate(180deg);
 }
 
@@ -276,14 +287,7 @@
 
 .mobile-app-image {
   flex: 1;
-  background-image: url("/src/images/mobile-screens.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.dark-theme .mobile-app-image {
-  background-image: url("/src/images/mobile-screens-dark.png");
+  background: url("/src/images/mobile-screens.png") center / contain no-repeat;
 }
 
 .mobile-app-btn {
@@ -306,6 +310,24 @@
   border: 1px solid #c1b6ad;
 }
 
+.mobile-app-btn:hover {
+  color: #e1d4c9;
+  background-color: #665f55;
+}
+
+.mobile-app-btn:hover.app-store::before {
+  background: url("/src/images/icons/iphone-light.svg") center / contain no-repeat;
+}
+
+.mobile-app-btn:hover.google-play::before {
+  background: url("/src/images/icons/goggleplay-light.svg") center / contain no-repeat;
+}
+
+.dark-theme .mobile-app-btn:hover {
+  background-color: #403f3d;
+  border: 1px solid transparent;
+}
+
 .bnt-top {
   font-size: 10px;
   font-weight: 400;
@@ -324,9 +346,6 @@
 .google-play::before {
   content: "";
   display: inline-block;
-
-  background-repeat: no-repeat;
-  background-size: contain;
   top: 14px;
   left: 20px;
   position: absolute;
@@ -335,21 +354,21 @@
 .app-store::before {
   width: 36px;
   height: 36px;
-  background-image: url("/src/images/icons/iphone.png");
+  background: url("/src/images/icons/iphone.svg") center / contain no-repeat;
 }
 
 .dark-theme .app-store::before {
-  background-image: url("/src/images/icons/iphone-light.png");
+  background: url("/src/images/icons/iphone-light.svg") center / contain no-repeat;
 }
 
 .google-play::before {
   width: 31px;
   height: 31px;
-  background-image: url("/src/images/icons/goggleplay.png");
+  background: url("/src/images/icons/goggleplay.svg") center / contain no-repeat;
 }
 
 .dark-theme .google-play::before {
-  background-image: url("/src/images/icons/goggleplay-light.png");
+  background: url("/src/images/icons/goggleplay-light.svg") center / contain no-repeat;
 }
 
 /* aside menu */
