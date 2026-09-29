@@ -84,6 +84,18 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.remove('is-active');
       });
 
+      modalCloseBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        menu.classList.remove('is-active');
+      });
+
+      menu.addEventListener('click', (event) => {
+        if (event.target === menu) {
+          menu.classList.remove('is-active');
+        }
+      });
+
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
           menu.classList.remove('is-active');
