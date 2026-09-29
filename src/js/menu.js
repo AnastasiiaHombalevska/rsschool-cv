@@ -1,80 +1,112 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // menu
-  const menuLinks = document.querySelectorAll('.menu-link');
-  const menuCategories = document.querySelectorAll('.cards-conteiner');
+  fetch('./src/data/data.json')
+    .then((response) => response.json())
+    .then((products) => {
+      const createCard = (product) => {
+        const card = document.createElement('div');
 
-  menuLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
+        card.classList.add('card');
 
-      const targetId = link.getAttribute('href');
+        card.innerHTML = `
+          <img class="card-img" src="${product.image}" alt="${product.alt}">
+          <div class="card-content">
+            <h2 class="card-title">${product.name}</h2>
+            <p class="card-descrp">${product.description}</p>
+            <p class="card-price">$${Number(product.price).toFixed(2)}</p>
+          </div>
+        `;
 
-      menuCategories.forEach((category) => {
-        category.style.display =
-          category.id === targetId.slice(1) ? 'flex' : 'none';
+        return card;
+      };
+
+      products.forEach((product) => {
+        const container = document.querySelector(`.${product.category}-list`);
+
+        if (!container) {
+          console.error(`Container not found: .${product.category}-list`);
+          return;
+        }
+
+        container.append(createCard(product));
       });
-    });
-  });
 
-  // modal
-  // add listeners for btns
-  const cards = document.querySelectorAll('.card');
-  const modalCloseBtn = document.querySelector('.product-close-btn');
-  const menu = document.querySelector('.modal');
+      // menu
+      const menuLinks = document.querySelectorAll('.menu-link');
+      const menuCategories = document.querySelectorAll('.cards-conteiner');
 
-  cards.forEach((card) => {
-    card.addEventListener('click', (event) => {
-      event.preventDefault();
+      menuLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
 
-      const cardImg = card.querySelector('.card-img');
-      const cardTitle = card.querySelector('.card-title');
-      const cardDescrp = card.querySelector('.card-descrp');
-      const cardPrice = card.querySelector('.card-price');
+          const targetId = link.getAttribute('href');
 
-      const modalImage = document.querySelector('.modal-image');
-      const productTitle = document.querySelector('.product-title');
-      const productDescription = document.querySelector('.product-description');
-      const productPrice = document.querySelector('.product-price');
+          menuCategories.forEach((category) => {
+            category.style.display =
+              category.id === targetId.slice(1) ? 'flex' : 'none';
+          });
+        });
+      });
 
-      modalImage.src = cardImg.src;
-      modalImage.alt = cardImg.alt;
+      // modal
+      const cards = document.querySelectorAll('.card');
+      const modalCloseBtn = document.querySelector('.product-close-btn');
+      const menu = document.querySelector('.modal');
 
-      productTitle.textContent = cardTitle.textContent;
-      productDescription.textContent = cardDescrp.textContent;
-      productPrice.textContent = cardPrice.textContent;
+      cards.forEach((card) => {
+        card.addEventListener('click', (event) => {
+          event.preventDefault();
 
-      menu.classList.add('is-active');
-    });
-  });
+          const cardImg = card.querySelector('.card-img');
+          const cardTitle = card.querySelector('.card-title');
+          const cardDescrp = card.querySelector('.card-descrp');
+          const cardPrice = card.querySelector('.card-price');
 
-  modalCloseBtn.addEventListener('click', (event) => {
-    event.preventDefault();
+          const modalImage = document.querySelector('.modal-image');
+          const productTitle = document.querySelector('.product-title');
+          const productDescription = document.querySelector(
+            '.product-description'
+          );
+          const productPrice = document.querySelector('.product-price');
 
-    menu.classList.remove('is-active');
-  });
+          modalImage.src = cardImg.src;
+          modalImage.alt = cardImg.alt;
+          productTitle.textContent = cardTitle.textContent;
+          productDescription.textContent = cardDescrp.textContent;
+          productPrice.textContent = cardPrice.textContent;
 
-  // categories
-  const menuTabs = document.querySelectorAll('.btn-menu-list-item');
+          menu.classList.add('is-active');
+        });
+      });
 
-  menuTabs.forEach((menuTab) => {
-    menuTab.addEventListener('click', (event) => {
-      const tab = event.target.closest('.menu-link');
+      modalCloseBtn.addEventListener('click', (event) => {
+        event.preventDefault();
 
-      if (!tab) return;
+        menu.classList.remove('is-active');
+      });
 
-      const category = tab.getAttribute('href');
+      // categories
+      const menuTabs = document.querySelectorAll('.btn-menu-list-item');
 
       menuTabs.forEach((menuTab) => {
-        menuTab.classList.remove('is-active');
-      });
+        menuTab.addEventListener('click', (event) => {
+          const tab = event.target.closest('.menu-link');
 
-      tab.classList.add('is-active');
+          if (!tab) return;
 
-      const categoryLists = document.querySelectorAll('.cards-conteiner');
+          const category = tab.getAttribute('href');
 
-      categoryLists.forEach((categoryList) => {
-        categoryList.hidden = `#${categoryList.id}` !== category;
+          menuTabs.forEach((menuTab) => {
+            menuTab.classList.remove('is-active');
+          });
+
+          tab.parentElement.classList.add('is-active');
+
+          const categoryLists = document.querySelectorAll('.cards-conteiner');
+
+          categoryLists.forEach((categoryList) => {
+            categoryList.hidden = `#${categoryList.id}` !== category;
+          });
+        });
       });
     });
-  });
-})
+});
