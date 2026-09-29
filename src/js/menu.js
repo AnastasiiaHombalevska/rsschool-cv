@@ -90,6 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
+      const body = document.querySelector('.body');
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 769) {
+          body.classList.remove('is-active');
+        }
+      });
+
       // categories
       const menuTabs = document.querySelectorAll('.btn-menu-list-item');
 
