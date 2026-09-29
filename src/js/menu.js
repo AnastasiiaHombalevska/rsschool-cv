@@ -84,6 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.remove('is-active');
       });
 
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          menu.classList.remove('is-active');
+        }
+      });
+
       // categories
       const menuTabs = document.querySelectorAll('.btn-menu-list-item');
 
