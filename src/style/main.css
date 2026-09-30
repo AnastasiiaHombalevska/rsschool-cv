@@ -133,12 +133,14 @@
   max-width: 480px;
   display: flex;
   overflow: hidden;
+  transition: transform 0.3s ease;
   margin: 0 auto;
 }
 
 .coffe-card {
   min-width: 100%;
   display: flex;
+  flex: 0 0 100%;
   flex-direction: column;
   gap: 20px;
 }
@@ -188,21 +190,22 @@
 
 .carousel-btn.prev {
   top: 50%;
-  right: -160px;
+  left: -160px;
 }
 
 .carousel-btn.next {
   top: 50%;
-  left: -160px;
+  right: -160px;
 }
 
 .prev::after {
   background: url("/src/images/icons/arrow-right.svg") center / contain no-repeat;
+  transform: rotate(180deg);
 }
 
 .next::after {
   background: url("/src/images/icons/arrow-right.svg") center / contain no-repeat;
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .carousel-btn:hover.prev::after,
@@ -213,7 +216,7 @@
 .carousel-btn:hover.next::after,
 .dark-theme .next::after {
   background: url("/src/images/icons/arrow-right-light.svg") center / contain no-repeat;
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .carousel-indicators {
@@ -227,6 +230,10 @@
   width: 40px;
   height: 4px;
   background: #c1b6ad;
+}
+
+.is-active.carousel-indicator {
+  background: #665f55;
 }
 
 .dark-theme .carousel-indicator {

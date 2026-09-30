@@ -66,4 +66,35 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     }))
   }
+
+  // carousel
+  const coffeeCards = document.querySelectorAll('.coffe-card');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  indicators[0].classList.add('is-active');
+  
+  let currentIndex = 0;
+
+  function showCard(index) {
+    currentIndex = index;
+
+    coffeeCards.forEach((card, i) => {
+      card.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('is-active', i === currentIndex);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % coffeeCards.length;
+    showCard(currentIndex);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + coffeeCards.length) % coffeeCards.length;
+    showCard(currentIndex);
+  });
 });
