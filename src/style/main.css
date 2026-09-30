@@ -240,6 +240,10 @@
   background: #665f55;
 }
 
+.dark-theme .is-active.carousel-indicator {
+  background: #c1b6ad;
+}
+
 /* about */
 .about {
   display: grid;
