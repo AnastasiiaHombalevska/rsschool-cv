@@ -434,11 +434,11 @@
 
 @media (max-width: 1280px) {
   .carousel-btn.prev {
-    right: 0;
+    left: 0;
   }
 
   .carousel-btn.next {
-    left: 0;
+    right: 0;
   }
 }
 
