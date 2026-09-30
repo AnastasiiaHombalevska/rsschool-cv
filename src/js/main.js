@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function loadComponent(selector, path) {
     const element = document.querySelector(selector);
 
+    if (!element) {
+      return Promise.resolve();
+    }
+
     return fetch(path)
       .then(function (response) {
         return response.text();
@@ -11,15 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  loadComponent('#header', './src/components/header.html').then(() => {
-    initThemeMode();
-    loadComponent('#header-nav', './src/components/navigation.html');
-    initMobileMenu();
-  });
+  loadComponent('#header', './src/components/header.html')
+    .then(() => {
+      return loadComponent('#header-nav', './src/components/navigation.html');
+    })
+    .then(() => {
+      initThemeMode();
+      initMobileMenu();
+    });
+
   loadComponent('#aside-nav', './src/components/navigation.html');
   loadComponent('#footer', './src/components/footer.html');
 
-  // theme mode
   function initThemeMode() {
     const themeButtons = document.querySelectorAll('.theme-mode-btn');
     const savedTheme = localStorage.getItem('theme');
@@ -39,27 +46,55 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // mobile muenu
   function initMobileMenu() {
-    const mobileMenu = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-side-menu');
+    const sideMenuLinks = document.querySelectorAll('.side-menu .nav-link');
+    const body = document.querySelector('.body');
+
+    if (!mobileMenu) {
+      return;
+    }
+
     mobileMenu.addEventListener('click', () => {
-       document.body.classList.toggle('is-active')
-    })
+      body.classList.toggle('is-active');
+    });
+
+    sideMenuLinks.forEach((link => {
+      link.addEventListener('click', function () {
+        body.classList.remove('is-active');
+      })
+    }))
   }
 
-  // menu
-  const menuLinks = document.querySelectorAll('.menu-link');
-  const menuCategories = document.querySelectorAll('.cards-conteiner');
+  // carousel
+  const coffeeCards = document.querySelectorAll('.coffe-card');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  indicators[0].classList.add('is-active');
+  
+  let currentIndex = 0;
 
-  menuLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
+  function showCard(index) {
+    currentIndex = index;
 
-      const targetId = link.getAttribute('href');
-
-      menuCategories.forEach((category) => {
-        category.style.display =
-          category.id === targetId.slice(1) ? 'flex' : 'none';
-      });
+    coffeeCards.forEach((card, i) => {
+      card.style.transform = `translateX(-${currentIndex * 100}%)`;
     });
+
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('is-active', i === currentIndex);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % coffeeCards.length;
+    showCard(currentIndex);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + coffeeCards.length) % coffeeCards.length;
+    showCard(currentIndex);
   });
 });

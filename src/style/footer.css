@@ -39,27 +39,42 @@
   border: 1px solid #c1b6ad;
   border-radius: 100px;
   padding: 18px;
+  cursor: pointer;
+}
+
+.social-media-list-item:hover {
+  background-color: #e1d4c9;
 }
 
 .social-item {
   display: block;
   width: 24px;
   height: 24px;
-  background-repeat: no-repeat;
-  background-size: contain;
   position: absolute;
 }
 
 .icon-tw .social-item {
-  background-image: url("/src/images/icons/twitter.png");
+  background: url("/src/images/icons/twitter.svg") center / contain no-repeat;
+}
+
+.social-media-list-item:hover.icon-tw .social-item {
+  background: url("/src/images/icons/twitter-dark.svg") center / contain no-repeat;
 }
 
 .icon-inst .social-item {
-  background-image: url("/src/images/icons/instagram.png");
+  background: url("/src/images/icons/instagram.svg") center / contain no-repeat;
+}
+
+.social-media-list-item:hover.icon-inst .social-item {
+  background: url("/src/images/icons/instagram-dark.svg") center / contain no-repeat;
 }
 
 .icon-fb .social-item {
-  background-image: url("/src/images/icons/facebook.png");
+  background: url("/src/images/icons/facebook.svg") center / contain no-repeat;
+}
+
+.social-media-list-item:hover.icon-fb .social-item {
+  background: url("/src/images/icons/facebook-dark.svg") center / contain no-repeat;
 }
 
 .contact-us {
